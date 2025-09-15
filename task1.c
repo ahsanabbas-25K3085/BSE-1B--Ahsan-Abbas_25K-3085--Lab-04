@@ -1,15 +1,20 @@
-#include<stdio.h>
-int main()
+#include <stdio.h>
+
+int main() 
 {
-	int pizzas ;
-	printf("How many Pizzas do you want:");
-	scanf("%d", &pizzas);
-	if(pizzas>1)
-	{
-		printf("\nCheck our multi_pizza deals.");
-	}
-	else
-	printf("\nYour total is 8$. ");
-	return 0;
-	
+    int size;
+    printf("Choose pizza size (1. Small, 2. Medium, 3. Large): ");
+    scanf("%d", &size);
+
+    if (size == 1)
+        printf("\nYou chose Small pizza.");
+    else if (size == 2)
+        printf("\nYou chose Medium pizza.");
+    else if (size == 3)
+        printf("\nYou chose Large pizza.");
+    else
+        printf("\nInvalid size.");
+
+    return 0;
 }
+

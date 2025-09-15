@@ -2,16 +2,21 @@
 
 int main()
  {
-    char cheese;
-    float total = 8;
+    int time;
+    float total = 20; 
 
-    printf("Do you want extra cheese (Y/N)? ");
-    scanf(" %c", &cheese);
+    printf("Enter current time (0-23): ");
+    scanf("%d", &time);
 
-    if (cheese == 'Y' || cheese == 'y')
-    {
-        total += 1.5;
+    if (time >= 11 && time <= 14)
+	 {
+        total = total - (total * 0.10);
+        printf("\nDiscount applied! New total: $%.2f", total);
+    } 
+	else 
+	{
+        printf("\nNo discount. Total: $%.2f", total);
     }
-    printf("\nTotal cost: %.2f $", total);
+
     return 0;
 }

@@ -2,30 +2,22 @@
 
 int main()
  {
-    int crust;
-    float total = 5; 
+    int pizzas, total = 0;
 
-    printf("Choose crust (1. Regular $0, 2. Thin $1, 3. Stuffed $2): ");
-    scanf("%d", &crust);
+    printf("How many pizzas (1, 2, or 3)? ");
+    scanf("%d", &pizzas);
 
-    if (crust == 1)
-      {
-	   total += 0;
-      }
-    else if (crust == 2)
-    {
-	 total += 1;
-    }
-    else if (crust == 3)
-    {
-	  total += 2;
-    }
-    else
-	 {
-        printf("\nInvalid crust.");
-        return 0 ;
+    if (pizzas == 1)
+        total = 8;
+    else if (pizzas == 2)
+        total = 15;
+    else if (pizzas == 3)
+        total = 21;
+    else {
+        printf("\nInvalid choice.");
+        return 0;
     }
 
-    printf("\nNew total cost is %f $", total);
+    printf("\nTotal cost for %d pizzas: $%d", pizzas, total);
     return 0;
 }

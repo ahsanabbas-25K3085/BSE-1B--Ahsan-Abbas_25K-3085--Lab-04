@@ -2,16 +2,17 @@
 
 int main()
  {
-    int option;
-    float total = 20;
+    int pizzas, crust;
 
-    printf("Pickup (1) or Delivery (2)? ");
-    scanf("%d", &option);
+    printf("How many pizzas? ");
+    scanf("%d", &pizzas);
 
-    if (option == 2)
+    printf("Choose crust (1. Regular, 2. Thin, 3. Stuffed): ");
+    scanf("%d", &crust);
+
+    if (pizzas == 3 && crust == 3)
     {
-        total += 3;
-    }  
-    printf("\nFinal cost: %.2f $", total);
+        printf("\nYou get free garlic bread!");
+    }
     return 0;
 }

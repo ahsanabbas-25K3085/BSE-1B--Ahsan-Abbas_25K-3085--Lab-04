@@ -2,16 +2,23 @@
 
 int main()
  {
-    char cheese;
-    float total = 8;
+    int crust;
+    float total = 8; 
 
-    printf("Do you want extra cheese (Y/N)? ");
-    scanf(" %c", &cheese);
+    printf("Choose crust (1. Regular $0, 2. Thin $1, 3. Stuffed $2): ");
+    scanf("%d", &crust);
 
-    if (cheese == 'Y' )
-    {
-        total += 1.5;
+    if (crust == 1)
+        total += 0;
+    else if (crust == 2)
+        total += 1;
+    else if (crust == 3)
+        total += 2;
+    else {
+        printf("\nInvalid crust.");
+        return 0;
     }
-    printf("\nTotal cost: %.2f $", total);
+
+    printf("\nNew total cost: $%.2f", total);
     return 0;
 }

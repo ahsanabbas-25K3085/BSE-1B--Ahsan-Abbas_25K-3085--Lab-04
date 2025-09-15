@@ -2,17 +2,16 @@
 
 int main()
  {
-    int pizzas, crust;
+    char student;
+    float total = 20;
 
-    printf("How many pizzas? ");
-    scanf("%d", &pizzas);
+    printf("Do you have a student ID (Y/N)? ");
+    scanf(" %c", &student);
 
-    printf("Choose crust (1. Regular, 2. Thin, 3. Stuffed): ");
-    scanf("%d", &crust);
-
-    if (pizzas == 3 && crust == 3)
+    if (student == 'Y' || student == 'y')
     {
-        printf("\nYou get free garlic bread!");
+	  total -= 2;
     }
+    printf("\nFinal cost: $%.2f", total);
     return 0;
 }

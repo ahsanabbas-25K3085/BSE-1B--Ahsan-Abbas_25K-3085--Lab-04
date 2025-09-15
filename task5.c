@@ -2,16 +2,15 @@
 
 int main()
  {
-    char student;
-    float total = 20;
+    char cheese;
+    float total = 8;
 
-    printf("Do you have a student ID (Y/N)? ");
-    scanf(" %c", &student);
+    printf("Do you want extra cheese (Y/N)? ");
+    scanf(" %c", &cheese);
 
-    if (student == 'Y' || student == 'y')
-    {
-	     total -= 2;
-    }
-    printf("\nFinal cost: %.2f $", total);
+    if (cheese == 'Y' || cheese == 'y')
+        total += 1.5;
+
+    printf("\nTotal cost: $%.2f", total);
     return 0;
 }
